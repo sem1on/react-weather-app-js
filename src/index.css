@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+    color:azure;
+    margin-top: 30px;
+    font-size: 44px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color:aquamarine;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+.app::before {
+    content: '';
+    background: url(./bg.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    border: none;
+    border-radius: 25px;
+    /* background-color: rgb(136, 115, 130); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.main-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.info-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.info-temp {
+    font-size: 45px;
+    color: azure;
+}
+
+.info-descr {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 20px;
+    color: azure;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.search-panel{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.search-input {
+    height: 30px;
+    width: 80%;
+    border: none;
+    font-size: 18px;
+    border-bottom: 2px solid azure;
+    background: none;
+    color: azure;
+    outline: none;
+}
+
+.search-button {
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    background: none;
+    border: 2px solid azure;
+    margin-left: 20px;
+    color: azure;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.search-button:hover {
+    background:azure;
+    color:#4e4e4e;
+}
