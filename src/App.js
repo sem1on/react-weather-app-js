@@ -1,16 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import cloudyNight from './icons/cloudy-night.svg';
-import cloudy from './icons/cloudy.svg';
-import day from './icons/day.svg';
-import night from './icons/night.svg';
-import perfectDay from './icons/perfect-day.svg';
-import rainNight from './icons/rain-night.svg';
-import rain from './icons/rain.svg';
-import storm from './icons/storm.svg';
-import sunny from './icons/sunny.svg';
-
 
 function App() {
 
@@ -46,22 +36,7 @@ function App() {
         searchCity()
     }, []);
 
-    const weatherIcons = {
-        "01d": sunny,
-        "01n": night,
-        "02d": day,
-        "02n": cloudyNight,
-        "03d": cloudy,
-        "03n": cloudy,
-        "04d": perfectDay,
-        "04n": cloudyNight,
-        "09d": rain,
-        "09n": rainNight,
-        "10d": rain,
-        "10n": rainNight,
-        "11d": storm,
-        "11n": storm,
-    };
+    const iconImg = `http://openweathermap.org/img/w/${weather.icon}.png`;
 
     return (
         <div className="app">
@@ -89,8 +64,7 @@ function App() {
                     </div>
                     <div className="info-weather">
                         <div className="weather-icon">
-                            <img src={weatherIcons[weather.icon]} alt="icon" />
-                            
+                            <img src={iconImg} alt="icon" />
                         </div>
                         <div className="info-temp">{Math.floor(weather.temp)}° C</div>
                         <div className="info-descr">
