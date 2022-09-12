@@ -1,5 +1,7 @@
 # Приложение по получению информации о погоде в выбранном городе
 
+## Сайт: https://enchanting-starship-664c29.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
